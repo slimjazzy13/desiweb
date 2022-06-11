@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "Big Shoulders Stencil Text" ;
+  overflow-x: hidden;
+}
+nav {
+  /* position: fixed; */
+  width: 100%;
+  background: linear-gradient(30deg,#CA82FF,#34B3F1);
+  height: 4rem;
+  color: snow;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+label {
+  font-size: 3rem;
+  padding-left: 3rem;
+}
+.burger {
+  display: none;
+}
+.navlinks {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+}
+li {
+  padding: 0 14px;
+}
+a {
+  font-size: 1.1rem;
+  color: snow;
+}
+a:hover {
+  font-size: 1.3rem;
+  color: blueviolet;
+}
+.section {
+  background-image: url(space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  text-align: center;
+}
+.gabru {
+  color: #1A1A40;
+  padding: 20% 0 0 20%;
+  font-size: 3rem;
+  font-family: "Rubik Glitch";
+  font-weight: 100;
+  width: 50%;
+}
+.biodata {
+  background:  linear-gradient(30deg, #1363DF, #47B5FF);
+  height: 100vh;
+  display: flex;
+}
+.namaste {
+  width: 100%;
+  color: snow;
+  font-size: 30px;
+  padding: 20% 5%;
+  font-family: Genos;
+  font-weight: lighter;
+}
+.ankur1a {
+  width: 80%;
+  padding: 30% 20%;
+  border-radius: 30%;
+  transform: rotate(15deg);
+}
+#features {
+  background-color: azure;
+  position: relative;
+  display: flex;
+  padding: 10% 5%;
+  z-index: 1;
+}
+.fbox {
+  text-align: center;
+  padding: 0% 3%;
+}
+.fbox h3 {
+  font-size: 1.8rem;
+    color: coral;
+}
+.fbox p {
+  font-size: 1.2rem;
+  color: grey;
+}
+#testi {
+  background:  linear-gradient(30deg, chocolate, goldenrod);
+  padding: 3%;
+}
+.travel {
+  color: snow;
+  padding: 20px;
+  text-align: center;
+}
+em {
+  font-size: 1.5rem;
+  color: snow;
+  text-align: center;
+}
+.carousel {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+  left: 25%;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide[data-active] {
+  opacity: 1;
+}
+.carbut {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carbut:hover,
+.carbut:focus {
+  color: snow;
+  background-color: rgba(0, 0, 0, 0.4);
+  outline: 1px solid grey;
+}
+.carbut.prev {
+  left: 1rem;
+}
+.carbut.next {
+  right: 1rem;
+}
+#pricing h2 {
+  text-align: center;
+  color: #4C3575;
+  padding: 20px 0 0;
+}
+.carddeck {
+  display: flex;
+  text-align: center;
+  color: #4C3575
+}
+.card {
+  flex: 0 0 auto;
+  width: 33.33%;
+  text-align: center;
+  padding: 3%;
+  color: #4C3575
+}
+.social {
+  text-align: center;
+  background: chartreuse;
+  padding: 10px;
+}
+.social a {
+  color: darkmagenta;
+  padding: 0 90px;
+}
+
+@media (max-width: 768px) {
+  .social a {
+    padding: 0 30px;
+  }
+  .carddeck {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  #features {
+    flex-direction: column;
+    padding: 5% 5%;
+  }
+  .fbox {
+    padding: 2% 2%;
+  }
+  .biodata {
+    flex-direction: column;
+    align-items: center;
+  }
+  .namaste {
+    font-family: Genos;
+  }
+  .ankur1a {
+    display: none;
+  }
+  .burger {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 20px;;
+  }
+  .navlinks {
+    position: absolute;
+    background-color: hsl(0 0% 100% /0.5);
+    height: 100vh;
+    width: 50%;
+    top: 4rem;
+    right: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    clip-path: circle(350px at 100% 0%);
+    -webkit-clip-path: circle(350px at 100% 0%);
+    transition: all 0.5s ease;
+  }
+  .navlinks.open {
+    clip-path: circle(0px at 100% 0%);
+    -webkit-clip-path: circle(0px at 100% 0%);
+  }
+  li {
+    padding: 30px 0 30px 100px;
+  }
+  a {
+    color: black;
+  }
+}
